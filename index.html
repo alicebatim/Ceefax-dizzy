@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dizzy Ceefax Walkthrough</title>
+  <style>
+    body {
+      background: black;
+      color: #0ff;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #006;
+      color: yellow;
+      padding: 5px;
+      font-size: 18px;
+    }
+    .page {
+      display: none;
+      padding: 10px;
+    }
+    .page.active {
+      display: block;
+    }
+    .nav {
+      background: #003;
+      color: white;
+      padding: 5px;
+    }
+    .nav input {
+      width: 50px;
+      text-align: center;
+    }
+    .nav button {
+      background: #0ff;
+      color: black;
+      border: none;
+      padding: 2px 5px;
+      cursor: pointer;
+    }
+    .nav button:focus {
+      outline: none;
+    }
+    .nav input:focus {
+      outline: none;
+    }
+    .map img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>Ceefax 100 Dizzy ZX Spectrum Walkthrough</header>
+  <div id="pages">
+    <div id="p100" class="page active">
+      <h2>Index</h2>
+      <ul>
+        <li><a href="#" onclick="goPage(101)">101 - Start to Spade</a></li>
+        <li><a href="#" onclick="goPage(102)">102 - Mushroom Cave</a></li>
+        <li><a href="#" onclick="goPage(103)">103 - Bridge Area</a></li>
+        <li><a href="#" onclick="goPage(104)">104 - Mine</a></li>
+        <li><a href="#" onclick="goPage(105)">105 - Final Area</a></li>
+        <li><a href="#" onclick="goPage(200)">200 - Map</a></li>
+        <li><a href="#" onclick="goPage(900)">900 - Sources</a></li>
+      </ul>
+    </div>
+    <div id="p101" class="page">
+      <h2>101 - Start to Spade</h2>
+      <p>Starting location: Dizzy’s house.</p>
+      <p>Move left to pick up the <strong>key</strong>.</p>
+      <p>Go right, avoid obstacles, then pick up the <strong>spade</strong> near the wall.</p>
+      <p>Tip: Jump carefully over the first pit.</p>
+    </div>
+    <div id="p102" class="page">
+      <h2>102 - Mushroom Cave</h2>
+      <p>Enter the cave.</p>
+      <p>Collect mushrooms carefully (some are poisonous in-game logic).</p>
+      <p>Cross the platforms to reach the exit.</p>
+      <p>Avoid enemies and falling objects.</p>
+    </div>
+    <div id="p103" class="page">
+      <h2>103 - Bridge Area</h2>
+      <p>Approach the bridge.</p>
+      <p>Push the crate to extend the bridge.</p>
+      <p>Jump over gaps and avoid falling into the water.</p>
+      <p>Pick up the rope at the far end.</p>
+    </div>
+    <div id="p104" class="page">
+      <h2>104 - Mine</h2>
+      <p>Enter the mine through the lower path.</p>
+      <p>Use the <strong>spade</strong> to remove obstacles blocking paths.</p>
+      <p>Navigate mine carts carefully to reach the lever.</p>
+      <p>Pull the lever to unlock the exit.</p>
+    </div>
+    <div id="p105" class="page">
+      <h2>105 - Final Area</h2>
+      <p>Exit mine into final area.</p>
+      <p>Solve puzzle by placing collected items in correct spots.</p>
+      <p>Avoid enemies and timed traps.</p>
+      <p>Goal: Reach the final chest to complete the stage.</p>
+    </div>
+    <div id="p200" class="page map">
+      <h2>200 - Map</h2>
+      <p><a href="https://maps.speccy.cz/map.php?id=Dizzy1" target="_blank">View full-size map</a></p>
+      <img src="https://maps.speccy.cz/map.php?id=Dizzy1" alt="Dizzy Map">
+    </div>
+    <div id="p900" class="page">
+      <h2>900 - Sources</h2>
+      <p><a href="https://maps.speccy.cz/map.php?id=Dizzy1" target="_blank">Dizzy Map</a></p>
+      <p><a href="https://gamefaqs.gamespot.com/sinclair/947034-dizzy/faqs/64979" target="_blank">Dizzy Walkthrough</a></p>
+    </div>
+  </div>
+  <div class="nav">
+    Type page number: <input id="goto" size="3" maxlength="3">
+    <button onclick="goPage()">Go</button>
+  </div>
+  <script>
+    function goPage(n) {
+      if (n) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('p' + n).classList.add('active');
+      } else {
+        var n = document.getElementById('goto').value;
+        goPage(n);
+      }
+    }
+  </script>
+</body>
+</html>
