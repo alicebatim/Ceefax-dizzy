@@ -2,117 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dizzy Ceefax Walkthrough</title>
-<style>
-  body { background: black; color: #0ff; font-family: monospace; margin:0; padding:0; }
-  header { background: #006; color: yellow; padding: 5px; font-size: 18px; }
-  .page { display: none; padding: 10px; }
-  .page.active { display: block; }
-  .nav { background: #003; color: white; padding: 5px; }
-  .nav input { width: 50px; text-align: center; }
-  .nav button { background: #0ff; color: black; border: none; padding: 2px 5px; cursor: pointer; }
-  .map img { width: 100%; height: auto; }
-</style>
+<title>100 - Dizzy Walkthrough Index</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>Ceefax 100 Dizzy ZX Spectrum Walkthrough</header>
+<header>Ceefax 100 - Dizzy Walkthrough Index</header>
 
-<div id="pages">
-
-<!-- Index Page -->
-<div id="p100" class="page active">
-  <h2>100 - Index</h2>
+<div class="page">
+  <p>Welcome to the Dizzy ZX Spectrum walkthrough.</p>
+  <p>Select a page:</p>
   <ul>
-    <li><a href="#" onclick="goPage(101)">101 - Start to Spade</a></li>
-    <li><a href="#" onclick="goPage(102)">102 - Mushroom Cave</a></li>
-    <li><a href="#" onclick="goPage(103)">103 - Bridge Area</a></li>
-    <li><a href="#" onclick="goPage(104)">104 - Mine</a></li>
-    <li><a href="#" onclick="goPage(105)">105 - Final Area</a></li>
-    <li><a href="#" onclick="goPage(200)">200 - Map</a></li>
-    <li><a href="#" onclick="goPage(900)">900 - Sources</a></li>
+    <li><a href="page101.html">101 - Start to Spade</a></li>
+    <li><a href="page102.html">102 - Mushroom Cave</a></li>
+    <li><a href="page103.html">103 - Bridge Area</a></li>
+    <li><a href="page104.html">104 - Mine</a></li>
+    <li><a href="page105.html">105 - Final Area</a></li>
+    <li><a href="page200.html">200 - Map</a></li>
+    <li><a href="page900.html">900 - Sources</a></li>
   </ul>
 </div>
 
-<!-- Page 101 -->
-<div id="p101" class="page">
-  <h2>101 - Start to Spade</h2>
-  <p>Screen 1: Dizzy starts at home. Move right to exit.</p>
-  <p>Screen 2: Pick up the key on the left platform.</p>
-  <p>Screen 3: Jump over pit, carefully avoid enemy.</p>
-  <p>Screen 4: Near the wall, pick up the spade.</p>
-  <p>Tip: The spade is required to clear obstacles later in the mine.</p>
-</div>
-
-<!-- Page 102 -->
-<div id="p102" class="page">
-  <h2>102 - Mushroom Cave</h2>
-  <p>Screen 5: Enter the cave, avoid mushrooms that move back and forth.</p>
-  <p>Screen 6: Jump across small platforms.</p>
-  <p>Screen 7: Collect safe mushrooms for points.</p>
-  <p>Screen 8: Watch out for falling rocks, use timing to cross to the exit.</p>
-</div>
-
-<!-- Page 103 -->
-<div id="p103" class="page">
-  <h2>103 - Bridge Area</h2>
-  <p>Screen 9: Approach the broken bridge, push crate to extend it.</p>
-  <p>Screen 10: Jump gaps carefully.</p>
-  <p>Screen 11: Avoid enemy and pick up rope at far end.</p>
-  <p>Screen 12: Use rope to descend to next area.</p>
-</div>
-
-<!-- Page 104 -->
-<div id="p104" class="page">
-  <h2>104 - Mine</h2>
-  <p>Screen 13: Enter the mine entrance, obstacles block the path.</p>
-  <p>Screen 14: Use spade to dig through piles of rocks.</p>
-  <p>Screen 15: Navigate moving mine carts.</p>
-  <p>Screen 16: Pull the lever to unlock exit door.</p>
-  <p>Screen 17: Exit mine to next area.</p>
-</div>
-
-<!-- Page 105 -->
-<div id="p105" class="page">
-  <h2>105 - Final Area</h2>
-  <p>Screen 18: Place collected items in correct spots to solve puzzle.</p>
-  <p>Screen 19: Avoid enemies and timed traps.</p>
-  <p>Screen 20: Reach final chest to complete the stage.</p>
-  <p>Congratulations! Walkthrough complete.</p>
-</div>
-
-<!-- Map Page -->
-<div id="p200" class="page map">
-  <h2>200 - Map</h2>
-  <p><a href="https://maps.speccy.cz/map.php?id=Dizzy1" target="_blank">View full-size map</a></p>
-  <img src="https://maps.speccy.cz/map.php?id=Dizzy1" alt="Dizzy Map">
-</div>
-
-<!-- Sources -->
-<div id="p900" class="page">
-  <h2>900 - Sources</h2>
-  <p><a href="https://maps.speccy.cz/map.php?id=Dizzy1" target="_blank">Dizzy Map</a></p>
-  <p><a href="https://gamefaqs.gamespot.com/sinclair/947034-dizzy/faqs/64979" target="_blank">Dizzy Walkthrough</a></p>
-</div>
-
-</div>
-
 <div class="nav">
-  Type page number: <input id="goto" size="3" maxlength="3">
-  <button onclick="goPage()">Go</button>
+  <a href="index.html">100</a>
+  <a href="page101.html">101</a>
+  <a href="page102.html">102</a>
+  <a href="page103.html">103</a>
+  <a href="page104.html">104</a>
+  <a href="page105.html">105</a>
+  <a href="page200.html">200</a>
+  <a href="page900.html">900</a>
 </div>
-
-<script>
-function goPage(n) {
-  if(n) {
-    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-    document.getElementById('p'+n).classList.add('active');
-  } else {
-    var n=document.getElementById('goto').value;
-    goPage(n);
-  }
-}
-</script>
-
 </body>
 </html>
