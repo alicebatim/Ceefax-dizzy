@@ -1,0 +1,7 @@
+body { background: black; color: #0ff; font-family: monospace; margin:0; padding:0; }
+header { background: #006; color: yellow; padding: 5px; font-size: 18px; }
+.page { padding: 10px; }
+.nav { background: #003; color: white; padding: 5px; }
+.nav a { color: #0ff; margin-right: 10px; text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+.map img { width: 100%; height: auto; }
